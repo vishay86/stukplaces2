@@ -1,42 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class = 'row'>
+  <div class = 'col-md-4'>
+    <h2><%= @place.name %></h2>
 
-<p>
-  <strong>Name:</strong>
-  <%= @place.name %>
-</p>
+    <p><strong>Address: </strong>
+      <%= @place.address %>
+    </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @place.address %>
-</p>
+    <p><strong>Phone Number: </strong>
+     <%=@place.phone %>
+   </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @place.description %>
-</p>
+    <p><strong>Website: </strong>
+     <%=@place.website %>
+    </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @place.phone %>
-</p>
+    <p><strong>Description: </strong> 
+      <%=@place.description %>
+    </p>
 
-<p>
-  <strong>Website:</strong>
-  <%= @place.website %>
-</p>
+    <div id="map-canvas" style="width: 230px; height:230px"></div> 
+  </div>
 
-<p>
-  <strong>User:</strong>
-  <%= @place.user_id %>
-</p>
+  <div class = 'col-md-8'>
+    <h3>Reviews by people</h3>
+  </div>
+</div>
 
-<p>
-  <strong>Map:</strong>
-  <%= @place.longitude %>
-  <%= @place.latitude %>
-</p>
-
-<div id = 'map-canvas' style = 'width: 230px; height:230px'></div>
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
@@ -58,4 +47,4 @@ function initMap() {
   })
 }
 
-    </script>
+</script>
