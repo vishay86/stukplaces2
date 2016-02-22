@@ -1,5 +1,7 @@
 class Place < ActiveRecord::Base
 	belongs_to :user
+	has_many :reviews , dependent: :destroy
+
 validates_presence_of :name
 validates_presence_of :phone
 validates_presence_of :address
