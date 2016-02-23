@@ -32,7 +32,7 @@ class ReviewsController < ApplicationController
 	def destroy
 		@review.destroy
     respond_to do |format|
-      format.html { redirect_to place_path(@review.path), notice: 'Review was successfully destroyed.' }
+      format.html { redirect_to place_path(@review.place), notice: 'Review was successfully destroyed.' }
       
     end
   end
